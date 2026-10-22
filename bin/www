@@ -1,6 +1,9 @@
 #!/usr/bin/env node
 
-// AI-KÄYTTÖ: Claude (Anthropic) – ympäristömuuttujat .env-tiedostosta
+// AI-KÄYTTÖ ALKAA
+// Työkalu: Claude (Anthropic)
+// Tarkoitus: palvelimen käynnistys, .env-tuki ja käynnistysilmoitus terminaaliin
+
 require('dotenv').config();
 
 var app = require('../app');
@@ -46,6 +49,6 @@ function onListening() {
   var addr = server.address();
   var bind = typeof addr === 'string' ? 'pipe ' + addr : 'port ' + addr.port;
   debug('Listening on ' + bind);
-  // AI-KÄYTTÖ: Claude (Anthropic) – käynnistysilmoitus terminaaliin
   console.log('Server is running on http://localhost:' + addr.port);
 }
+// AI-KÄYTTÖ PÄÄTTYY

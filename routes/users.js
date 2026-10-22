@@ -1,3 +1,6 @@
+// AI-KÄYTTÖ ALKAA
+// Työkalu: Claude (Anthropic)
+// Tarkoitus: Express-pohjan esimerkkireitti /users (ei käytössä sovelluksen sivuilla)
 var express = require('express');
 var router = express.Router();
 
@@ -7,3 +10,4 @@ router.get('/', function(req, res, next) {
 });
 
 module.exports = router;
+// AI-KÄYTTÖ PÄÄTTYY

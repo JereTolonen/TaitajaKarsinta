@@ -38,6 +38,7 @@ Portti ja `NODE_ENV` luetaan `.env`-tiedostosta (oletuksena 3000 ja production).
 app.js                  Express-sovellus ja virheenkäsittely
 bin/www                 Palvelimen käynnistys
 routes/index.js         Etusivu (/) ja yksityiskohtasivu (/tapahtuma.html?id=)
+routes/users.js         Express-pohjan esimerkkireitti /users, ei käytössä sivuilla
 views/                  EJS-sivut (index, tapahtuma, error) ja partials
 public/data/            tapahtumat.json
 public/javascripts/     main.js (valikko), tapahtumat.js (lista), tapahtuma.js (yksityiskohdat), suosikit.js (evästeet)
@@ -68,6 +69,7 @@ public/icons, images    Annetut ikonit, favicon ja kuvat
 ## Muutokset annettuun aineistoon
 
 - `tapahtumat.json` on kopioitu kansioon `public/data/`
+- Tehtävänanto ja wireframet (`prompts/`) on jätetty pois repositoriosta `.gitignore`-tiedostolla
 - Kuvapolut on korjattu vastaamaan annettuja kuvatiedostoja (`images/Kuva1.png` jne.)
 - Jokaiselle tapahtumalle on lisätty kentät `kuvaus`, `paivamaara` ja `kesto`, koska yksityiskohtasivun wireframe näyttää ne. Tapahtuman 3 tiedot ovat wireframesta, muut ovat keksittyjä esimerkkitietoja
 - Kesto-ikoni `public/icons/clock.svg` on lisätty annettujen ikonien tyyliin
@@ -77,5 +79,5 @@ public/icons, images    Annetut ikonit, favicon ja kuvat
 - **Työkalu:** Claude (Anthropic), malli Claude Opus 5.5
 - **Missä:** koko toteutuksessa. Tekoäly tuotti Express-pohjan, EJS-sivut ja -osat, CSS-tyylit, JavaScript-toiminnot (korttien muodostus, haku, suodatus, lajittelu, tilastot, suosikit, yksityiskohtasivu, valikko), Docker- ja Compose-määritykset, `.env`-tuen, aineiston lisäkentät sekä tämän README:n
 - **Tarkoitus:** sovelluksen toteuttaminen tehtävänannon ja wireframejen mukaan
-- Tekoälyn tuottamat koodiosiot on merkitty lähdekoodiin kommenteilla `AI-KÄYTTÖ ALKAA` / `AI-KÄYTTÖ PÄÄTTYY` (EJS-tiedostoissa `<%# ... %>`). JSON-tiedostoon ei voi kirjoittaa kommentteja, joten sen muutokset on kuvattu yllä
+- Tekoälyn tuottamat koodiosiot on merkitty lähdekoodiin kommenteilla `AI-KÄYTTÖ ALKAA` / `AI-KÄYTTÖ PÄÄTTYY` (EJS-tiedostoissa `<%# ... %>`, Docker- ja asetustiedostoissa `#`). JSON-tiedostoon ei voi kirjoittaa kommentteja, joten sen muutokset on kuvattu yllä
 - Commit-viesteissä on merkintä `Co-Authored-By: Claude`
