@@ -1,5 +1,8 @@
 #!/usr/bin/env node
 
+// AI-KÄYTTÖ: Claude (Anthropic) – ympäristömuuttujat .env-tiedostosta
+require('dotenv').config();
+
 var app = require('../app');
 var debug = require('debug')('taitajakarsinta:server');
 var http = require('http');

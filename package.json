@@ -8,6 +8,7 @@
   "dependencies": {
     "cookie-parser": "~1.4.7",
     "debug": "~2.6.9",
+    "dotenv": "~16.6.1",
     "ejs": "~3.1.10",
     "express": "^4.22.3",
     "http-errors": "~2.0.0",
@@ -26,6 +27,5 @@
   "bugs": {
     "url": "https://github.com/JereTolonen/TaitajaKarsinta/issues"
   },
-  "homepage": "https://github.com/JereTolonen/TaitajaKarsinta#readme",
-  "devDependencies": {}
+  "homepage": "https://github.com/JereTolonen/TaitajaKarsinta#readme"
 }
