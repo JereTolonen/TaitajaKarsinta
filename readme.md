@@ -1,16 +1,16 @@
 # Tapahtumakalenteri
 
-Taitaja2027, laji 206 – webkehityksen karsinta. Responsiivinen tapahtumasovellus, jonka tapahtumat luetaan JSON-tiedostosta JavaScriptillä.
+Webkehityksen karsinta. Responsiivinen tapahtumasovellus, jonka tapahtumat luetaan JSON-tiedostosta JavaScriptillä.
 
 Projektissa on kaksi versiota:
 
-- **Demo (`demo/`)** – staattinen HTML/CSS/JS-versio, ei vaadi palvelinohjelmistoa. Suositeltu arvioitava versio: https://jeretolonen.github.io/TaitajaKarsinta/demo
+- **Demo (`demo/`)** – staattinen HTML/CSS/JS-versio, ei vaadi palvelinohjelmistoa. Nopea arvioitava versio: https://jeretolonen.github.io/TaitajaKarsinta/demo
 - **Express-versio** – sama sovellus Node.js/Express-palvelimella.
 
 ## Teknologiat
 
 - Demo: HTML, CSS, JavaScript
-- Express-versio: lisäksi Node.js, Express, EJS, dotenv, Docker
+- Express-versio: JS, Node.js, Express, EJS, dotenv, Docker
 
 ## Käynnistys
 
