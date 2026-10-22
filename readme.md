@@ -2,11 +2,29 @@
 
 Taitaja2027, laji 206 – webkehityksen karsinta. Responsiivinen tapahtumasovellus, jonka tapahtumat luetaan JSON-tiedostosta JavaScriptillä.
 
+Projektissa on kaksi versiota:
+
+- **Demo (`demo/`)** – staattinen HTML/CSS/JS-versio, ei vaadi palvelinohjelmistoa. Suositeltu arvioitava versio.
+- **Express-versio** – sama sovellus Node.js/Express-palvelimella.
+
 ## Teknologiat
 
-HTML, CSS, JavaScript, Node.js, Express, EJS, dotenv, Docker
+- Demo: HTML, CSS, JavaScript
+- Express-versio: lisäksi Node.js, Express, EJS, dotenv, Docker
 
 ## Käynnistys
+
+### Demo
+
+Avaa `demo/index.html` paikallisen palvelimen kautta, esim. VS Coden Live Server tai:
+
+```bash
+npx serve demo
+```
+
+Toimii myös GitHub Pagesissa. Suoraan tiedostona (`file://`) avattuna selain estää JSON-tiedoston lataamisen.
+
+### Express-versio
 
 ```bash
 npm install
@@ -18,29 +36,40 @@ Avaa http://localhost:3000. Vaihtoehtoisesti `docker compose up -d --build`.
 
 ## Valmiit ominaisuudet
 
+Testattu demossa selaimessa (leveydet 320, 375, 800 ja 1200 px).
+
 - Etusivu, kortit, tilastot ja alatunniste wireframen mukaan
 - Responsiivisuus ja hampurilaisvalikko
-- Haku, kategoriasuodatus ja lajittelu (nimi A–Ö / Ö–A, osallistujat nousevasti / laskevasti) toimivat yhdessä
-- Tilastot päivittyvät näkyvien tapahtumien mukaan
-- Yksityiskohtasivu `tapahtuma.html?id=3` ja paluulinkki
-- Suosikit tallennetaan evästeeseen ja säilyvät uudelleenlatauksen jälkeen
+- Kortit muodostetaan JSON-aineistosta
+- Haku päivittyy kirjoitettaessa, kategoriat muodostetaan aineistosta ja lajittelu (nimi A–Ö / Ö–A, osallistujat nousevasti / laskevasti) toimii haun ja suodatuksen tuloksiin
+- Tilastot lasketaan näkyvistä tapahtumista ja päivittyvät jokaisen muutoksen jälkeen
+- Yksityiskohtasivu `tapahtuma.html?id=3`, tarkemmat tiedot aineistosta ja paluulinkki. Puuttuva, virheellinen tai tuntematon tunniste näyttää ilmoituksen
+- Suosikit tallennetaan evästeeseen ja säilyvät uudelleenlatauksen jälkeen. Suosikit-linkki näyttää vain suosikit
 
 ## Keskeneräiset tai puuttuvat ominaisuudet ja tunnetut viat
 
+### Demo
+
+- Alatunnisteen Tietosuojaseloste ja Käyttöehdot eivät ole linkkejä, koska niille ei ole sisältöä
+- Yhteystiedot-linkki vie alatunnisteeseen, jossa ei ole yhteystietoja
+- Aineistossa ei ole päivämäärää eikä kestoa, joten yksityiskohtasivulla näytetään vain paikkakunta ja osallistujat
+- Annettu `close.svg` on sisällöltään sama kuin `arrow-down.svg`, joten sitä ei käytetä. `clock.svg` ei ole käytössä, koska kestotietoa ei ole
+- Kuvat on muunnettu annetuista PNG-tiedostoista JPG-muotoon ja nimetty JSON-tiedoston polkujen mukaan (`images/tapahtuma1.jpg` jne.)
+
+### Express-versio
+
 - Kun yksityiskohtasivun id on virheellinen tai puuttuu, virheilmoituksen alle jää näkyviin tyhjä tapahtumakortti. Syy: CSS-sääntö `.detail-card { display: grid }` ohittaa `hidden`-attribuutin
 - Ei-numeerinen id (esim. `?id=abc`) näyttää ilmoituksen "Tapahtumaa ei valittu", vaikka oikea ilmoitus olisi virheellinen tunniste
-- Alatunnisteen Tietosuojaseloste- ja Käyttöehdot-linkeille ei ole sisältösivuja (`href="#"`)
-- Yhteystiedot-linkki vie alatunnisteeseen, jossa ei ole yhteystietoja
-- Hyvin kapealla näytöllä (320 px) mobiilikortit aiheuttavat vähäisen vaakavierityksen
-- Yksityiskohtasivun tietolista (`dl`) sisältää `div`- ja `img`-elementtejä tavalla, joka ei ole kelvollista HTML:ää
-- Annettuja ikoneja `arrow-down.svg` ja `close.svg` ei käytetä
-- Kuvat ovat isoja PNG-tiedostoja (n. 2 Mt / kuva), eikä niitä ole pienennetty
-- `tapahtumat.json`-tiedoston kuvapolut (`images/tapahtuma1.jpg` jne.) eivät vastaa kuvatiedostoja (`images/Kuva1.png` jne.), joten kuvat eivät näy
 - Yksityiskohtasivu ei näytä aineiston kenttää `tarkemmat_tiedot`, koska koodi lukee kenttiä `kuvaus`, `paivamaara` ja `kesto`, joita aineistossa ei ole
+- JSON-tiedoston kuvapolut ja kuvatiedostojen nimet (`images/Tapahtuma1.png` jne.) eivät täsmää, joten kuvat eivät näy kaikissa ympäristöissä
+- Alatunnisteen Tietosuojaseloste- ja Käyttöehdot-linkit ovat tyhjiä (`href="#"`)
+- Hyvin kapealla näytöllä (320 px) mobiilikortit aiheuttavat vähäisen vaakavierityksen
+- Yksityiskohtasivun tietolista (`dl`) ei ole kelvollista HTML:ää
+- Kuvat ovat isoja PNG-tiedostoja (n. 2 Mt / kuva)
 
 ## Tekoälyn käyttö
 
 - **Työkalu:** Claude (Anthropic)
-- **Missä:** koko toteutus (palvelin, sivupohjat, CSS, JavaScript, Docker, aineiston lisäkentät, README)
+- **Missä:** koko toteutus (demo, palvelin, sivupohjat, CSS, JavaScript, Docker, README)
 - **Tarkoitus:** koodin tuottaminen, refaktorointi, tarkistaminen ja testaus
 - Tekoälyn tuottamat tai olennaisesti muokkaamat koodiosiot on merkitty lähdekoodiin kommenteilla `AI-KÄYTTÖ ALKAA` / `AI-KÄYTTÖ PÄÄTTYY`
