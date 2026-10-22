@@ -4,7 +4,7 @@ Taitaja2027, laji 206 – webkehityksen karsinta. Responsiivinen tapahtumasovell
 
 Projektissa on kaksi versiota:
 
-- **Demo (`demo/`)** – staattinen HTML/CSS/JS-versio, ei vaadi palvelinohjelmistoa. Suositeltu arvioitava versio.
+- **Demo (`demo/`)** – staattinen HTML/CSS/JS-versio, ei vaadi palvelinohjelmistoa. Suositeltu arvioitava versio: https://jeretolonen.github.io/TaitajaKarsinta/demo
 - **Express-versio** – sama sovellus Node.js/Express-palvelimella.
 
 ## Teknologiat
@@ -16,13 +16,15 @@ Projektissa on kaksi versiota:
 
 ### Demo
 
-Avaa `demo/index.html` paikallisen palvelimen kautta, esim. VS Coden Live Server tai:
+Verkossa: https://jeretolonen.github.io/TaitajaKarsinta/demo
+
+Paikallisesti: avaa `demo/index.html` paikallisen palvelimen kautta, esim. VS Coden Live Server tai:
 
 ```bash
 npx serve demo
 ```
 
-Toimii myös GitHub Pagesissa. Suoraan tiedostona (`file://`) avattuna selain estää JSON-tiedoston lataamisen.
+Suoraan tiedostona (`file://`) avattuna selain estää JSON-tiedoston lataamisen.
 
 ### Express-versio
 

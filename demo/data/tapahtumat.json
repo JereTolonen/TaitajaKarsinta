@@ -5,7 +5,7 @@
     "kategoria": "Seminaari",
     "paikkakunta": "Kuopio",
     "osallistujat": 180,
-    "kuva": "images/tapahtuma1.jpg",
+    "kuva": "images/tapahtuma1.avif",
     "tarkemmat_tiedot": "Seminaari webkehittäjille ja ohjelmistosuunnittelijoille."
   },
   {
@@ -14,7 +14,7 @@
     "kategoria": "Kilpailu",
     "paikkakunta": "Joensuu",
     "osallistujat": 95,
-    "kuva": "images/tapahtuma2.jpg",
+    "kuva": "images/tapahtuma2.avif",
     "tarkemmat_tiedot": "24 tunnin ohjelmointikilpailu opiskelijoille ja IT-alan ammattilaisille."
   },
   {
@@ -23,7 +23,7 @@
     "kategoria": "Koulutus",
     "paikkakunta": "Kuopio",
     "osallistujat": 40,
-    "kuva": "images/tapahtuma3.jpg",
+    "kuva": "images/tapahtuma3.avif",
     "tarkemmat_tiedot": "Koulutus JavaScriptin, Reactin ja Node.js:n perusteista."
   },
   {
@@ -32,7 +32,7 @@
     "kategoria": "Messut",
     "paikkakunta": "Helsinki",
     "osallistujat": 350,
-    "kuva": "images/tapahtuma4.jpg",
+    "kuva": "images/tapahtuma4.avif",
     "tarkemmat_tiedot": "Teknologia-alan messut, joissa esitellään uusimpia tuotteita ja palveluja."
   },
   {
@@ -41,7 +41,7 @@
     "kategoria": "Seminaari",
     "paikkakunta": "Oulu",
     "osallistujat": 120,
-    "kuva": "images/tapahtuma5.jpg",
+    "kuva": "images/tapahtuma5.avif",
     "tarkemmat_tiedot": "Pilvipalveluihin, tietoturvaan ja tekoälyyn keskittyvä seminaari."
   },
   {
@@ -50,7 +50,7 @@
     "kategoria": "Koulutus",
     "paikkakunta": "Kuopio",
     "osallistujat": 75,
-    "kuva": "images/tapahtuma6.jpg",
+    "kuva": "images/tapahtuma6.avif",
     "tarkemmat_tiedot": "Aloitteleville ohjelmistokehittäjille suunnattu koulutuspäivä."
   }
 ]
