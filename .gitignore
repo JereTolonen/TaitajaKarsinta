@@ -1,4 +1,4 @@
-# AI-KÄYTTÖ ALKAA | Työkalu: Claude (Anthropic) | Tarkoitus: versionhallinnasta pois jätettävät tiedostot
+# AI-KÄYTTÖ ALKAA | Työkalu: Claude (Anthropic) | Tarkoitus: versionhallinnasta pois jätettävät tiedostot sekä listan refaktorointi
 node_modules/
 npm-debug.log*
 .env

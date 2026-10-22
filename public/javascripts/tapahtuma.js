@@ -1,6 +1,6 @@
 // AI-KÄYTTÖ ALKAA
 // Työkalu: Claude (Anthropic)
-// Tarkoitus: yksittäisen tapahtuman tietojen näyttäminen URL-parametrin ?id= perusteella
+// Tarkoitus: yksittäisen tapahtuman tietojen näyttäminen URL-parametrin ?id= perusteella sekä koodin refaktorointi
 var tila = document.getElementById('tapahtuman-tila');
 var sisalto = document.getElementById('tapahtuma');
 

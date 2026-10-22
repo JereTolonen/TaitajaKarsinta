@@ -1,7 +1,7 @@
 // AI-KÄYTTÖ ALKAA
 // Työkalu: Claude (Anthropic)
 // Tarkoitus: tapahtumien lukeminen JSON-tiedostosta, korttien muodostaminen,
-// haku, kategoriasuodatus, lajittelu, tilastot ja suosikit
+// haku, kategoriasuodatus, lajittelu, tilastot ja suosikit sekä koodin refaktorointi
 var tapahtumat = [];
 
 // Suosikit-näkymä avataan osoitteella /?suosikit=1

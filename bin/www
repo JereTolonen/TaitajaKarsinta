@@ -1,8 +1,7 @@
 #!/usr/bin/env node
-
 // AI-KÄYTTÖ ALKAA
 // Työkalu: Claude (Anthropic)
-// Tarkoitus: palvelimen käynnistys, .env-tuki ja käynnistysilmoitus terminaaliin
+// Tarkoitus: palvelimen käynnistys, .env-tuki ja käynnistysilmoitus terminaaliin sekä niiden refaktorointi
 
 require('dotenv').config();
 
