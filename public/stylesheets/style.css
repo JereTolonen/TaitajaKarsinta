@@ -10,7 +10,6 @@
   --text: #242424;
   --text-muted: #616161;
   --accent: #0078d4;
-  --accent-hover: #106ebe;
   --fav: #c42b1c;
 
   --radius-sm: 4px;
@@ -93,10 +92,10 @@ a {
   gap: var(--space-2);
   min-height: 36px;
   padding: var(--space-2) var(--space-5);
-  border: 1px solid var(--accent);
+  border: 1px solid var(--text);
   border-radius: var(--radius-sm);
-  background: var(--accent);
-  color: #fff;
+  background: var(--bg);
+  color: var(--text);
   font: inherit;
   font-weight: 600;
   font-size: 14px;
@@ -107,19 +106,7 @@ a {
 }
 
 .btn:hover {
-  background: var(--accent-hover);
-  border-color: var(--accent-hover);
-}
-
-.btn-outline {
-  background: var(--bg);
-  border-color: var(--border);
-  color: var(--text);
-}
-
-.btn-outline:hover {
   background: var(--surface);
-  border-color: #c4c9d0;
 }
 
 .tag {
@@ -182,7 +169,7 @@ a {
 }
 
 .nav-list a.is-active {
-  border-bottom-color: var(--accent);
+  border-bottom-color: var(--text);
 }
 
 .menu-toggle {
@@ -224,8 +211,10 @@ a {
 
 /* ---------- Hero ---------- */
 .hero {
-  background: var(--surface);
   border-bottom: 1px solid var(--border);
+  background:
+    linear-gradient(rgba(255, 255, 255, 0.86), rgba(255, 255, 255, 0.86)),
+    url("/images/Kuva1.png") center / cover no-repeat var(--surface);
 }
 
 .hero-inner {
@@ -246,7 +235,7 @@ a {
 }
 
 .hero p {
-  color: var(--text-muted);
+  color: var(--text);
   font-size: 17px;
 }
 
@@ -307,8 +296,7 @@ select {
   width: 100%;
   min-height: 36px;
   padding: var(--space-2) var(--space-3);
-  border: 1px solid var(--border);
-  border-bottom-color: #8a8a8a;
+  border: 1px solid #8a8a8a;
   border-radius: var(--radius-sm);
   background: var(--bg);
   color: var(--text);
@@ -327,14 +315,7 @@ select {
 
 input[type="search"]:hover,
 select:hover {
-  border-color: #c4c9d0;
-  border-bottom-color: #616161;
-}
-
-input[type="search"]:focus,
-select:focus {
-  outline: none;
-  border-bottom: 2px solid var(--accent);
+  border-color: var(--text);
 }
 
 .list-status {
@@ -774,7 +755,7 @@ select:focus {
   }
 
   .nav-list a.is-active {
-    border-left-color: var(--accent);
+    border-left-color: var(--text);
     background: var(--surface);
   }
 
@@ -882,6 +863,7 @@ select:focus {
   }
 
   .footer-inner {
+    flex-wrap: nowrap;
     gap: var(--space-3);
     padding-top: var(--space-5);
     padding-bottom: var(--space-5);
@@ -889,33 +871,65 @@ select:focus {
   }
 
   .footer-links {
-    order: 3;
-    width: 100%;
+    display: none;
   }
 
-  /* Yksityiskohtasivu */
+  /* Yksityiskohtasivu: kuva otsikon vieressä, tiedot kahdessa sarakkeessa */
   .detail-card {
-    grid-template-columns: 1fr;
-    gap: var(--space-4);
+    grid-template-columns: 96px minmax(0, 1fr);
+    gap: var(--space-3);
     padding: var(--space-4);
   }
 
+  .detail-content {
+    display: contents;
+  }
+
+  .detail-media {
+    grid-column: 1;
+    grid-row: 1 / span 2;
+  }
+
   .detail-content h1 {
-    font-size: 22px;
+    grid-column: 2;
+    font-size: 18px;
+    overflow-wrap: break-word;
+  }
+
+  .detail-meta {
+    grid-column: 2;
+    gap: var(--space-1) var(--space-4);
+  }
+
+  .detail-description,
+  .info-list,
+  .detail-actions {
+    grid-column: 1 / -1;
   }
 
   .info-list {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    grid-auto-flow: column;
   }
 
   .info-item,
-  .info-item + .info-item {
-    border-left: 0;
+  .info-item + .info-item,
+  .info-item:nth-child(3) {
+    gap: var(--space-2);
     padding: var(--space-3);
+    border-top: 0;
+    border-left: 0;
   }
 
-  .info-item + .info-item {
+  .info-item:nth-child(2),
+  .info-item:nth-child(4) {
     border-top: 1px solid var(--border);
+  }
+
+  .info-item:nth-child(3),
+  .info-item:nth-child(4) {
+    border-left: 1px solid var(--border);
   }
 
   .info-item img {
