@@ -1,0 +1,20 @@
+<%# AI-KÄYTTÖ ALKAA | Työkalu: Claude (Anthropic) | Tarkoitus: virhesivu (esim. 404), otsikko ja teksti tulevat virheestä %>
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+  <%- include('partials/head') %>
+</head>
+<body>
+  <%- include('partials/nav') %>
+  <main class="container error-page">
+    <h1><%= status %> &ndash; <%= heading %></h1>
+    <p><%= text %></p>
+    <p><a class="btn btn-outline" href="/">Takaisin etusivulle</a></p>
+    <% if (stack) { %>
+      <pre><%= stack %></pre>
+    <% } %>
+  </main>
+  <%- include('partials/footer') %>
+</body>
+</html>
+<%# AI-KÄYTTÖ PÄÄTTYY %>

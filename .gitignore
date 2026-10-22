@@ -1,0 +1,8 @@
+# AI-KÄYTTÖ ALKAA | Työkalu: Claude (Anthropic) | Tarkoitus: versionhallinnasta pois jätettävät tiedostot
+node_modules/
+npm-debug.log*
+.env
+# Käyttöliittymän tyyliohjeet tekoälylle
+prompts/general.md
+prompts/inspiration.md
+# AI-KÄYTTÖ PÄÄTTYY

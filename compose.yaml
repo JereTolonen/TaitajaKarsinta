@@ -1,0 +1,11 @@
+# AI-KÄYTTÖ: Claude (Anthropic) – Docker Compose -määritys
+# Arvot luetaan .env-tiedostosta, oletuksena portti 3000.
+services:
+  web:
+    build: .
+    ports:
+      - "${PORT:-3000}:${PORT:-3000}"
+    environment:
+      PORT: ${PORT:-3000}
+      NODE_ENV: ${NODE_ENV:-production}
+    restart: unless-stopped

@@ -1,0 +1,24 @@
+<%# AI-KÄYTTÖ ALKAA | Työkalu: Claude (Anthropic) | Tarkoitus: sivun ylätunniste, navigaatio ja hampurilaisvalikko %>
+<% var current = locals.active || ''; %>
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="/" class="logo">
+      <img src="/icons/logo.svg" alt="" width="48" height="36">
+      <span>Tapahtumakalenteri</span>
+    </a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="paavalikko" aria-label="Avaa valikko">
+      <span class="menu-bar"></span>
+      <span class="menu-bar"></span>
+      <span class="menu-bar"></span>
+    </button>
+    <nav class="main-nav" aria-label="Päävalikko">
+      <ul id="paavalikko" class="nav-list">
+        <li><a href="/" data-nav="etusivu"<% if (current === 'etusivu') { %> class="is-active" aria-current="page"<% } %>>Etusivu</a></li>
+        <li><a href="/#tapahtumat" data-nav="tapahtumat"<% if (current === 'tapahtumat') { %> class="is-active" aria-current="page"<% } %>>Tapahtumat</a></li>
+        <li><a href="/?suosikit=1#tapahtumat" data-nav="suosikit">Suosikit</a></li>
+        <li><a href="#yhteystiedot" data-nav="yhteystiedot">Yhteystiedot</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<%# AI-KÄYTTÖ PÄÄTTYY %>

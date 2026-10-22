@@ -1,0 +1,68 @@
+[
+  {
+    "id": 1,
+    "nimi": "Webkehittäjien seminaari",
+    "kategoria": "Seminaari",
+    "paikkakunta": "Kuopio",
+    "osallistujat": 180,
+    "kuva": "images/Kuva1.png",
+    "kuvaus": "Webkehittäjien seminaari kokoaa alan ammattilaiset kuulemaan ajankohtaisia puheenvuoroja frontend- ja backend-kehityksestä. Päivän aikana käsitellään saavutettavuutta, suorituskykyä ja uusimpia työkaluja.",
+    "paivamaara": "2026-11-05",
+    "kesto": "1 päivä"
+  },
+  {
+    "id": 2,
+    "nimi": "Hackathon 2026",
+    "kategoria": "Kilpailu",
+    "paikkakunta": "Joensuu",
+    "osallistujat": 95,
+    "kuva": "images/Kuva2.png",
+    "kuvaus": "Kahden päivän koodauskilpailu, jossa tiimit rakentavat toimivan prototyypin annettuun haasteeseen. Parhaat ratkaisut palkitaan, ja mentorit auttavat koko tapahtuman ajan.",
+    "paivamaara": "2026-11-21",
+    "kesto": "2 päivää"
+  },
+  {
+    "id": 3,
+    "nimi": "Ohjelmointikoulutus",
+    "kategoria": "Koulutus",
+    "paikkakunta": "Kuopio",
+    "osallistujat": 40,
+    "kuva": "images/Kuva3.png",
+    "kuvaus": "Käytännönläheinen ohjelmointikoulutus, jossa käsitellään moderneja web-teknologioita, JavaScriptiä ja sovelluskehityksen parhaita käytäntöjä. Sopii kaikille, jotka haluavat kehittää osaamistaan web-kehityksen saralla.",
+    "paivamaara": "2026-09-12",
+    "kesto": "6 tuntia"
+  },
+  {
+    "id": 4,
+    "nimi": "Teknologia Expo",
+    "kategoria": "Messut",
+    "paikkakunta": "Helsinki",
+    "osallistujat": 350,
+    "kuva": "images/Kuva4.png",
+    "kuvaus": "Teknologiamessuilla esittäytyvät yritykset, oppilaitokset ja startupit. Tapahtumassa voi tutustua uusiin laitteisiin, palveluihin ja työmahdollisuuksiin sekä seurata lavaohjelmaa.",
+    "paivamaara": "2026-12-03",
+    "kesto": "2 päivää"
+  },
+  {
+    "id": 5,
+    "nimi": "Pilvipalvelupäivä",
+    "kategoria": "Seminaari",
+    "paikkakunta": "Oulu",
+    "osallistujat": 120,
+    "kuva": "images/kuva5.png",
+    "kuvaus": "Seminaaripäivä pilvipalveluista ja niiden hyödyntämisestä ohjelmistokehityksessä. Puhujat kertovat käytännön kokemuksia palveluiden käyttöönotosta, tietoturvasta ja kustannusten hallinnasta.",
+    "paivamaara": "2026-10-29",
+    "kesto": "7 tuntia"
+  },
+  {
+    "id": 6,
+    "nimi": "Junior Developer Day",
+    "kategoria": "Koulutus",
+    "paikkakunta": "Kuopio",
+    "osallistujat": 75,
+    "kuva": "images/kuva6.png",
+    "kuvaus": "Aloitteleville kehittäjille suunnattu päivä, jossa harjoitellaan työpajoissa versionhallintaa, koodikatselmointia ja tiimityöskentelyä. Päivän päätteeksi on mahdollisuus verkostoitua alan yritysten kanssa.",
+    "paivamaara": "2026-11-14",
+    "kesto": "5 tuntia"
+  }
+]
