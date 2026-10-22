@@ -35,8 +35,8 @@ Avaa http://localhost:3000. Vaihtoehtoisesti `docker compose up -d --build`.
 - Yksityiskohtasivun tietolista (`dl`) sisältää `div`- ja `img`-elementtejä tavalla, joka ei ole kelvollista HTML:ää
 - Annettuja ikoneja `arrow-down.svg` ja `close.svg` ei käytetä
 - Kuvat ovat isoja PNG-tiedostoja (n. 2 Mt / kuva), eikä niitä ole pienennetty
-- Tapahtumille on lisätty kentät `kuvaus`, `paivamaara` ja `kesto`. Vain tapahtuman 3 tiedot ovat wireframesta, muut ovat tekoälyn keksimiä esimerkkitietoja
-- Kesto-ikoni `clock.svg` ei kuulu annettuihin ikoneihin, vaan se on tehty itse
+- `tapahtumat.json`-tiedoston kuvapolut (`images/tapahtuma1.jpg` jne.) eivät vastaa kuvatiedostoja (`images/Kuva1.png` jne.), joten kuvat eivät näy
+- Yksityiskohtasivu ei näytä aineiston kenttää `tarkemmat tiedot`, koska koodi lukee kenttiä `kuvaus`, `paivamaara` ja `kesto`, joita aineistossa ei ole
 
 ## Tekoälyn käyttö
 

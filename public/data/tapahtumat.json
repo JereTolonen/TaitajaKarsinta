@@ -5,10 +5,8 @@
     "kategoria": "Seminaari",
     "paikkakunta": "Kuopio",
     "osallistujat": 180,
-    "kuva": "images/Kuva1.png",
-    "kuvaus": "Webkehittäjien seminaari kokoaa alan ammattilaiset kuulemaan ajankohtaisia puheenvuoroja frontend- ja backend-kehityksestä. Päivän aikana käsitellään saavutettavuutta, suorituskykyä ja uusimpia työkaluja.",
-    "paivamaara": "2026-11-05",
-    "kesto": "1 päivä"
+    "kuva": "images/tapahtuma1.jpg",
+    "tarkemmat tiedot": "Seminaari webkehittäjille ja ohjelmistosuunnittelijoille."
   },
   {
     "id": 2,
@@ -16,10 +14,8 @@
     "kategoria": "Kilpailu",
     "paikkakunta": "Joensuu",
     "osallistujat": 95,
-    "kuva": "images/Kuva2.png",
-    "kuvaus": "Kahden päivän koodauskilpailu, jossa tiimit rakentavat toimivan prototyypin annettuun haasteeseen. Parhaat ratkaisut palkitaan, ja mentorit auttavat koko tapahtuman ajan.",
-    "paivamaara": "2026-11-21",
-    "kesto": "2 päivää"
+    "kuva": "images/tapahtuma2.jpg",
+    "tarkemmat tiedot": "24 tunnin ohjelmointikilpailu opiskelijoille ja IT-alan ammattilaisille."
   },
   {
     "id": 3,
@@ -27,10 +23,8 @@
     "kategoria": "Koulutus",
     "paikkakunta": "Kuopio",
     "osallistujat": 40,
-    "kuva": "images/Kuva3.png",
-    "kuvaus": "Käytännönläheinen ohjelmointikoulutus, jossa käsitellään moderneja web-teknologioita, JavaScriptiä ja sovelluskehityksen parhaita käytäntöjä. Sopii kaikille, jotka haluavat kehittää osaamistaan web-kehityksen saralla.",
-    "paivamaara": "2026-09-12",
-    "kesto": "6 tuntia"
+    "kuva": "images/tapahtuma3.jpg",
+    "tarkemmat tiedot": "Koulutus JavaScriptin, Reactin ja Node.js:n perusteista."
   },
   {
     "id": 4,
@@ -38,10 +32,8 @@
     "kategoria": "Messut",
     "paikkakunta": "Helsinki",
     "osallistujat": 350,
-    "kuva": "images/Kuva4.png",
-    "kuvaus": "Teknologiamessuilla esittäytyvät yritykset, oppilaitokset ja startupit. Tapahtumassa voi tutustua uusiin laitteisiin, palveluihin ja työmahdollisuuksiin sekä seurata lavaohjelmaa.",
-    "paivamaara": "2026-12-03",
-    "kesto": "2 päivää"
+    "kuva": "images/tapahtuma4.jpg",
+    "tarkemmat tiedot": "Teknologia-alan messut, joissa esitellään uusimpia tuotteita ja palveluja."
   },
   {
     "id": 5,
@@ -49,10 +41,8 @@
     "kategoria": "Seminaari",
     "paikkakunta": "Oulu",
     "osallistujat": 120,
-    "kuva": "images/kuva5.png",
-    "kuvaus": "Seminaaripäivä pilvipalveluista ja niiden hyödyntämisestä ohjelmistokehityksessä. Puhujat kertovat käytännön kokemuksia palveluiden käyttöönotosta, tietoturvasta ja kustannusten hallinnasta.",
-    "paivamaara": "2026-10-29",
-    "kesto": "7 tuntia"
+    "kuva": "images/tapahtuma5.jpg",
+    "tarkemmat tiedot": "Pilvipalveluihin, tietoturvaan ja tekoälyyn keskittyvä seminaari."
   },
   {
     "id": 6,
@@ -60,9 +50,7 @@
     "kategoria": "Koulutus",
     "paikkakunta": "Kuopio",
     "osallistujat": 75,
-    "kuva": "images/kuva6.png",
-    "kuvaus": "Aloitteleville kehittäjille suunnattu päivä, jossa harjoitellaan työpajoissa versionhallintaa, koodikatselmointia ja tiimityöskentelyä. Päivän päätteeksi on mahdollisuus verkostoitua alan yritysten kanssa.",
-    "paivamaara": "2026-11-14",
-    "kesto": "5 tuntia"
+    "kuva": "images/tapahtuma6.jpg",
+    "tarkemmat tiedot": "Aloitteleville ohjelmistokehittäjille suunnattu koulutuspäivä."
   }
 ]
