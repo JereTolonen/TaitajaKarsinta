@@ -779,6 +779,7 @@ select:hover {
     padding: 0;
     border: 0;
     overflow: hidden;
+    color: transparent;
     white-space: nowrap;
   }
 
