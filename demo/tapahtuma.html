@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<!-- AI-KÄYTTÖ ALKAA | Työkalu: Claude (Anthropic) | Tarkoitus: tapahtuman yksityiskohtasivun rakenne wireframen mukaan (staattinen demoversio) -->
+<html lang="fi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tapahtuma – Tapahtumakalenteri</title>
+  <link rel="icon" type="image/svg+xml" href="icons/favicon.svg">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/valikko.js" defer></script>
+  <script src="js/suosikit.js" defer></script>
+  <script src="js/tapahtuma.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">
+        <img src="icons/logo.svg" alt="" width="48" height="36">
+        <span>Tapahtumakalenteri</span>
+      </a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="paavalikko" aria-label="Avaa valikko">
+        <span class="menu-bar"></span>
+        <span class="menu-bar"></span>
+        <span class="menu-bar"></span>
+      </button>
+      <nav class="main-nav" aria-label="Päävalikko">
+        <ul id="paavalikko" class="nav-list">
+          <li><a href="index.html" data-nav="etusivu">Etusivu</a></li>
+          <li><a href="index.html#tapahtumat" data-nav="tapahtumat" class="is-active">Tapahtumat</a></li>
+          <li><a href="index.html?suosikit=1#tapahtumat" data-nav="suosikit">Suosikit</a></li>
+          <li><a href="#yhteystiedot" data-nav="yhteystiedot">Yhteystiedot</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container detail">
+    <a class="back-link" href="index.html#tapahtumat"><span aria-hidden="true">←</span> Takaisin tapahtumiin</a>
+
+    <p id="tapahtuman-tila" class="list-status" role="alert" hidden></p>
+
+    <article class="detail-card" id="tapahtuma" hidden>
+      <div class="detail-media">
+        <img id="tapahtuma-kuva" src="" alt="" width="768" height="512">
+      </div>
+
+      <div class="detail-content">
+        <h1 id="tapahtuma-nimi"></h1>
+
+        <div class="detail-meta">
+          <span class="tag" id="tapahtuma-kategoria"></span>
+          <p class="meta"><img src="icons/location.svg" alt="Paikkakunta" width="16" height="16"><span id="tapahtuma-paikkakunta"></span></p>
+          <p class="meta"><img src="icons/people.svg" alt="Osallistujat" width="16" height="16"><span id="tapahtuma-osallistujat-teksti"></span></p>
+        </div>
+
+        <p class="detail-description" id="tapahtuma-tiedot"></p>
+
+        <dl class="info-list">
+          <div class="info-item">
+            <dt><img src="icons/location.svg" alt="" width="32" height="32">Paikkakunta</dt>
+            <dd id="tapahtuma-paikkakunta-tieto"></dd>
+          </div>
+          <div class="info-item">
+            <dt><img src="icons/users.svg" alt="" width="32" height="32">Osallistujia</dt>
+            <dd id="tapahtuma-osallistujat"></dd>
+          </div>
+        </dl>
+
+        <div class="detail-actions">
+          <button class="fav-btn" type="button" aria-pressed="false">
+            <img src="icons/heart-outline.svg" alt="" width="22" height="22">
+            <span class="fav-text">Lisää suosikiksi</span>
+          </button>
+        </div>
+      </div>
+    </article>
+  </main>
+
+  <footer class="site-footer" id="yhteystiedot">
+    <div class="container footer-inner">
+      <p class="copyright">&copy; 2026 Tapahtumakalenteri</p>
+      <ul class="footer-links">
+        <li><a>Tietosuojaseloste</a></li>
+        <li><a>Käyttöehdot</a></li>
+      </ul>
+      <ul class="social">
+        <li><a href="https://www.facebook.com/" aria-label="Facebook"><img src="icons/facebook.svg" alt="" width="32" height="32"></a></li>
+        <li><a href="https://www.instagram.com/" aria-label="Instagram"><img src="icons/instagram.svg" alt="" width="32" height="32"></a></li>
+        <li><a href="https://www.linkedin.com/" aria-label="LinkedIn"><img src="icons/linkedin.svg" alt="" width="32" height="32"></a></li>
+      </ul>
+    </div>
+  </footer>
+</body>
+</html>
+<!-- AI-KÄYTTÖ PÄÄTTYY -->

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<!-- AI-KÄYTTÖ ALKAA | Työkalu: Claude (Anthropic) | Tarkoitus: etusivun rakenne wireframen mukaan (staattinen demoversio) -->
+<html lang="fi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tapahtumakalenteri</title>
+  <link rel="icon" type="image/svg+xml" href="icons/favicon.svg">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/valikko.js" defer></script>
+  <script src="js/suosikit.js" defer></script>
+  <script src="js/tapahtumat.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo">
+        <img src="icons/logo.svg" alt="" width="48" height="36">
+        <span>Tapahtumakalenteri</span>
+      </a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="paavalikko" aria-label="Avaa valikko">
+        <span class="menu-bar"></span>
+        <span class="menu-bar"></span>
+        <span class="menu-bar"></span>
+      </button>
+      <nav class="main-nav" aria-label="Päävalikko">
+        <ul id="paavalikko" class="nav-list">
+          <li><a href="index.html" data-nav="etusivu">Etusivu</a></li>
+          <li><a href="index.html#tapahtumat" data-nav="tapahtumat" class="is-active" aria-current="page">Tapahtumat</a></li>
+          <li><a href="index.html?suosikit=1#tapahtumat" data-nav="suosikit">Suosikit</a></li>
+          <li><a href="#yhteystiedot" data-nav="yhteystiedot">Yhteystiedot</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" aria-labelledby="hero-otsikko">
+      <div class="container hero-inner">
+        <h1 id="hero-otsikko">Tapahtumakalenteri</h1>
+        <p>Löydä tulevat tapahtumat ympäri Suomen</p>
+        <a class="btn" href="#tapahtumat">Tutustu tapahtumiin</a>
+      </div>
+    </section>
+
+    <section id="tapahtumat" class="container events" aria-labelledby="tapahtumat-otsikko">
+      <h2 id="tapahtumat-otsikko" class="visually-hidden">Tapahtumat</h2>
+
+      <form class="toolbar" role="search" id="hakulomake">
+        <div class="field field-search">
+          <label for="haku">Haku:</label>
+          <div class="search-input">
+            <input type="search" id="haku" name="haku" placeholder="Hae tapahtumia..." autocomplete="off">
+            <img src="icons/search.svg" alt="" width="20" height="20">
+          </div>
+        </div>
+        <div class="field">
+          <label for="kategoria">Kategoria:</label>
+          <select id="kategoria" name="kategoria">
+            <option value="">Kaikki</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="lajittelu">Lajittelu:</label>
+          <select id="lajittelu" name="lajittelu">
+            <option value="nimi-asc">Nimi A–Ö</option>
+            <option value="nimi-desc">Nimi Ö–A</option>
+            <option value="osallistujat-asc">Osallistujat, vähiten ensin</option>
+            <option value="osallistujat-desc">Osallistujat, eniten ensin</option>
+          </select>
+        </div>
+      </form>
+
+      <p id="listan-tila" class="list-status" aria-live="polite" hidden></p>
+
+      <ul id="tapahtumalista" class="event-grid"></ul>
+
+      <noscript><p class="list-status">Tapahtumien näyttäminen vaatii JavaScriptin.</p></noscript>
+
+      <section class="stats" aria-label="Tilastot">
+        <div class="stat">
+          <img src="icons/calendar.svg" alt="" width="40" height="40">
+          <div>
+            <p class="stat-label">Tapahtumia yhteensä</p>
+            <p class="stat-value" id="tilasto-maara">0</p>
+          </div>
+        </div>
+        <div class="stat">
+          <img src="icons/users.svg" alt="" width="40" height="40">
+          <div>
+            <p class="stat-label">Osallistujia yhteensä</p>
+            <p class="stat-value" id="tilasto-osallistujat">0</p>
+          </div>
+        </div>
+      </section>
+    </section>
+  </main>
+
+  <template id="korttipohja">
+    <li>
+      <article class="event-card">
+        <div class="card-media">
+          <img class="card-image" src="" alt="" loading="lazy" width="384" height="256">
+          <button class="fav-btn" type="button" aria-pressed="false">
+            <img src="icons/heart-outline.svg" alt="" width="24" height="24">
+          </button>
+        </div>
+        <div class="card-body">
+          <h3 class="card-title"></h3>
+          <span class="tag card-category"></span>
+          <p class="meta"><img src="icons/location.svg" alt="Paikkakunta" width="16" height="16"><span class="card-city"></span></p>
+          <p class="meta"><img src="icons/people.svg" alt="Osallistujat" width="16" height="16"><span class="card-people"></span></p>
+          <a class="btn btn-outline card-link" href="">Lisätietoja</a>
+          <span class="chevron" aria-hidden="true">›</span>
+        </div>
+      </article>
+    </li>
+  </template>
+
+  <footer class="site-footer" id="yhteystiedot">
+    <div class="container footer-inner">
+      <p class="copyright">&copy; 2026 Tapahtumakalenteri</p>
+      <ul class="footer-links">
+        <li><a>Tietosuojaseloste</a></li>
+        <li><a>Käyttöehdot</a></li>
+      </ul>
+      <ul class="social">
+        <li><a href="https://www.facebook.com/" aria-label="Facebook"><img src="icons/facebook.svg" alt="" width="32" height="32"></a></li>
+        <li><a href="https://www.instagram.com/" aria-label="Instagram"><img src="icons/instagram.svg" alt="" width="32" height="32"></a></li>
+        <li><a href="https://www.linkedin.com/" aria-label="LinkedIn"><img src="icons/linkedin.svg" alt="" width="32" height="32"></a></li>
+      </ul>
+    </div>
+  </footer>
+</body>
+</html>
+<!-- AI-KÄYTTÖ PÄÄTTYY -->
