@@ -27,16 +27,16 @@ app.use('/users', usersRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
-  next(createError(404));
+  next(createError(404, 'Sivua ei löytynyt'));
 });
 
 // error handler (fallback page)
 var errorTexts = {
-  400: 'The request could not be understood.',
-  401: 'You need to log in to see this page.',
-  403: 'You do not have permission to see this page.',
-  404: 'The page you are looking for does not exist.',
-  500: 'Something went wrong on our side. Please try again later.'
+  400: 'Pyyntöä ei voitu käsitellä.',
+  401: 'Sivun näkeminen vaatii kirjautumisen.',
+  403: 'Sinulla ei ole oikeutta nähdä tätä sivua.',
+  404: 'Etsimääsi sivua ei löytynyt.',
+  500: 'Palvelussa tapahtui virhe. Yritä myöhemmin uudelleen.'
 };
 
 app.use(function(err, req, res, next) {
@@ -44,10 +44,10 @@ app.use(function(err, req, res, next) {
 
   res.status(status);
   res.render('error', {
-    title: status + ' - ' + (err.message || 'Error'),
+    title: status + ' – Tapahtumakalenteri',
     status: status,
     heading: err.message || 'Error',
-    text: errorTexts[status] || 'An unexpected error occurred.',
+    text: errorTexts[status] || 'Tapahtui odottamaton virhe.',
     stack: req.app.get('env') === 'development' ? err.stack : null
   });
 });

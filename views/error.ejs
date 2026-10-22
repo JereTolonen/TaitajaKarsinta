@@ -1,17 +1,15 @@
+<%# AI-KÄYTTÖ ALKAA | Työkalu: Claude (Anthropic) | Tarkoitus: virhesivu (esim. 404), otsikko ja teksti tulevat virheestä %>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fi">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title><%= title %></title>
-  <link rel="stylesheet" href="/stylesheets/style.css">
+  <%- include('partials/head') %>
 </head>
 <body>
   <%- include('partials/nav') %>
-  <main class="error">
+  <main class="container error-page">
     <h1><%= status %> &ndash; <%= heading %></h1>
     <p><%= text %></p>
-    <p><a href="/">Back to home</a></p>
+    <p><a class="btn btn-outline" href="/">Takaisin etusivulle</a></p>
     <% if (stack) { %>
       <pre><%= stack %></pre>
     <% } %>
@@ -19,3 +17,4 @@
   <%- include('partials/footer') %>
 </body>
 </html>
+<%# AI-KÄYTTÖ PÄÄTTYY %>
