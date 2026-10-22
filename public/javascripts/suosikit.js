@@ -1,6 +1,6 @@
 // AI-KÄYTTÖ ALKAA
 // Työkalu: Claude (Anthropic)
-// Tarkoitus: suosikkien tallentaminen evästeeseen ja suosikkipainikkeen tila
+// Tarkoitus: suosikkien tallentaminen evästeeseen ja suosikkipainikkeen tila sekä koodin refaktorointi
 var SUOSIKKI_EVASTE = 'suosikit';
 var EVASTEEN_IKA = 60 * 60 * 24 * 365; // vuosi sekunteina
 

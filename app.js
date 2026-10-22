@@ -1,6 +1,6 @@
 // AI-KÄYTTÖ ALKAA
 // Työkalu: Claude (Anthropic)
-// Tarkoitus: Express-sovelluksen pohja, EJS-näkymämoottori ja virheenkäsittely
+// Tarkoitus: Express-sovelluksen pohja, EJS-näkymämoottori ja virheenkäsittely sekä niiden refaktorointi
 var createError = require('http-errors');
 var express = require('express');
 var path = require('path');

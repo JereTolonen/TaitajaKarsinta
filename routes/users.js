@@ -1,6 +1,6 @@
 // AI-KÄYTTÖ ALKAA
 // Työkalu: Claude (Anthropic)
-// Tarkoitus: Express-pohjan esimerkkireitti /users (ei käytössä sovelluksen sivuilla)
+// Tarkoitus: Express-pohjan esimerkkireitti /users (ei käytössä sovelluksen sivuilla) sekä sen refaktorointi
 var express = require('express');
 var router = express.Router();
 

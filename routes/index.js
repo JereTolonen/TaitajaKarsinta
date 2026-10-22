@@ -1,6 +1,6 @@
 // AI-KÄYTTÖ ALKAA
 // Työkalu: Claude (Anthropic)
-// Tarkoitus: sivujen reitit (etusivu ja tapahtuman yksityiskohtasivu)
+// Tarkoitus: sivujen reitit (etusivu ja tapahtuman yksityiskohtasivu) sekä niiden refaktorointi
 var express = require('express');
 var router = express.Router();
 
