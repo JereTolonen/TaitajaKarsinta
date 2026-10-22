@@ -2,6 +2,7 @@
 node_modules/
 npm-debug.log*
 .env
-# Tehtävänanto ja wireframet
-prompts/
+# Käyttöliittymän tyyliohjeet tekoälylle
+prompts/general.md
+prompts/inspiration.md
 # AI-KÄYTTÖ PÄÄTTYY

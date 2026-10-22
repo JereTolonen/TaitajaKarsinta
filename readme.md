@@ -69,7 +69,7 @@ public/icons, images    Annetut ikonit, favicon ja kuvat
 ## Muutokset annettuun aineistoon
 
 - `tapahtumat.json` on kopioitu kansioon `public/data/`
-- Tehtävänanto ja wireframet (`prompts/`) on jätetty pois repositoriosta `.gitignore`-tiedostolla
+- Annettu tehtävämateriaali (tehtävänanto, wireframet ja alkuperäinen `tapahtumat.json`) on kansiossa `prompts/`. Tyyliohjeet `prompts/general.md` ja `prompts/inspiration.md` on jätetty pois repositoriosta `.gitignore`-tiedostolla
 - Kuvapolut on korjattu vastaamaan annettuja kuvatiedostoja (`images/Kuva1.png` jne.)
 - Jokaiselle tapahtumalle on lisätty kentät `kuvaus`, `paivamaara` ja `kesto`, koska yksityiskohtasivun wireframe näyttää ne. Tapahtuman 3 tiedot ovat wireframesta, muut ovat keksittyjä esimerkkitietoja
 - Kesto-ikoni `public/icons/clock.svg` on lisätty annettujen ikonien tyyliin
