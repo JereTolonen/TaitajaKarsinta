@@ -1,4 +1,4 @@
-# AI-KÄYTTÖ ALKAA | Työkalu: Claude (Anthropic) | Tarkoitus: Docker-kuvan määritys
+# AI-KÄYTTÖ ALKAA | Työkalu: Claude (Anthropic) | Tarkoitus: Docker-kuvan määritys sekä sen refaktorointi
 FROM node:20-alpine
 WORKDIR /app
 COPY package*.json ./
