@@ -1,8 +1,11 @@
 // AI-KÄYTTÖ ALKAA
 // Työkalu: Claude (Anthropic)
 // Tarkoitus: tapahtumien lukeminen JSON-tiedostosta, korttien muodostaminen,
-// haku, kategoriasuodatus, lajittelu ja tilastot
+// haku, kategoriasuodatus, lajittelu, tilastot ja suosikit
 var tapahtumat = [];
+
+// Suosikit-näkymä avataan osoitteella /?suosikit=1
+var vainSuosikit = new URLSearchParams(location.search).has('suosikit');
 
 var lista = document.getElementById('tapahtumalista');
 var pohja = document.getElementById('korttipohja');
@@ -27,6 +30,14 @@ function luoKortti(tapahtuma) {
   kortti.querySelector('.card-people').textContent = tapahtuma.osallistujat + ' osallistujaa';
   linkki.href = '/tapahtuma.html?id=' + tapahtuma.id;
   linkki.setAttribute('aria-label', 'Lisätietoja: ' + tapahtuma.nimi);
+
+  var suosikkiNappi = kortti.querySelector('.fav-btn');
+  paivitaSuosikkiNappi(suosikkiNappi, onSuosikki(tapahtuma.id), tapahtuma.nimi);
+  suosikkiNappi.addEventListener('click', function () {
+    var suosikki = vaihdaSuosikki(tapahtuma.id);
+    paivitaSuosikkiNappi(suosikkiNappi, suosikki, tapahtuma.nimi);
+    if (vainSuosikit) paivitaLista();
+  });
 
   return kortti;
 }
@@ -57,7 +68,8 @@ function suodata(lahde) {
   return lahde.filter(function (tapahtuma) {
     var nimiOsuu = tapahtuma.nimi.toLocaleLowerCase('fi').indexOf(hakusana) !== -1;
     var kategoriaOsuu = kategoria === '' || tapahtuma.kategoria === kategoria;
-    return nimiOsuu && kategoriaOsuu;
+    var suosikkiOsuu = !vainSuosikit || onSuosikki(tapahtuma.id);
+    return nimiOsuu && kategoriaOsuu && suosikkiOsuu;
   });
 }
 
@@ -100,8 +112,26 @@ function paivitaLista() {
     lista.appendChild(luoKortti(tapahtuma));
   });
 
-  naytaTila(naytettavat.length === 0 ? 'Hakuehtoja vastaavia tapahtumia ei löytynyt.' : '');
+  var viesti = '';
+  if (naytettavat.length === 0) {
+    viesti = vainSuosikit && lueSuosikit().length === 0
+      ? 'Et ole vielä lisännyt suosikkeja. Lisää tapahtuma suosikiksi sydänpainikkeesta.'
+      : 'Hakuehtoja vastaavia tapahtumia ei löytynyt.';
+  } else if (vainSuosikit) {
+    viesti = 'Näytetään vain suosikit.';
+  }
+  naytaTila(viesti);
   paivitaTilastot(naytettavat);
+}
+
+// Merkitse Suosikit aktiiviseksi navigaatiossa suosikkinäkymässä
+if (vainSuosikit) {
+  document.querySelectorAll('.nav-list a').forEach(function (a) {
+    var aktiivinen = a.dataset.nav === 'suosikit';
+    a.classList.toggle('is-active', aktiivinen);
+    if (aktiivinen) a.setAttribute('aria-current', 'page');
+    else a.removeAttribute('aria-current');
+  });
 }
 
 hakukentta.addEventListener('input', paivitaLista);
