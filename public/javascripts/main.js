@@ -1,6 +1,6 @@
 // AI-KÄYTTÖ ALKAA
 // Työkalu: Claude (Anthropic)
-// Tarkoitus: hampurilaisvalikon avaaminen ja sulkeminen mobiilinäkymässä
+// Tarkoitus: hampurilaisvalikon avaaminen ja sulkeminen mobiilinäkymässä sekä koodin refaktorointi
 document.addEventListener('DOMContentLoaded', function () {
   var nappi = document.querySelector('.menu-toggle');
   var valikko = document.querySelector('.main-nav');
