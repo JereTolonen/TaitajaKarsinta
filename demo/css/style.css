@@ -215,7 +215,7 @@ a {
   border-bottom: 1px solid var(--border);
   background:
     linear-gradient(rgba(255, 255, 255, 0.86), rgba(255, 255, 255, 0.86)),
-    url("../images/tapahtuma1.jpg") center / cover no-repeat var(--surface);
+    url("../images/tapahtuma1.avif") center / cover no-repeat var(--surface);
 }
 
 .hero-inner {

@@ -34,6 +34,10 @@
   box-sizing: border-box;
 }
 
+[hidden] {
+  display: none !important;
+}
+
 body {
   margin: 0;
   min-height: 100vh;
@@ -214,7 +218,7 @@ a {
   border-bottom: 1px solid var(--border);
   background:
     linear-gradient(rgba(255, 255, 255, 0.86), rgba(255, 255, 255, 0.86)),
-    url("/images/Kuva1.png") center / cover no-repeat var(--surface);
+    url("/images/tapahtuma1.avif") center / cover no-repeat var(--surface);
 }
 
 .hero-inner {
@@ -616,35 +620,37 @@ select:hover {
   color: var(--text);
 }
 
+/* Kuvake on dt-elementin sisällä, joten dl-rakenne pysyy kelvollisena */
 .info-list {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   margin: 0;
   border: 1px solid var(--border);
   border-radius: var(--radius);
 }
 
 .info-item {
-  display: flex;
-  align-items: center;
-  gap: var(--space-3);
-  padding: var(--space-4);
+  position: relative;
+  padding: var(--space-4) var(--space-4) var(--space-4) 64px;
 }
 
 .info-item + .info-item {
   border-left: 1px solid var(--border);
 }
 
-.info-item img {
-  flex-shrink: 0;
-  width: 32px;
-  height: 32px;
-  opacity: 0.85;
-}
-
 .info-item dt {
   color: var(--text-muted);
   font-size: 13px;
+}
+
+.info-item dt img {
+  position: absolute;
+  top: 50%;
+  left: var(--space-4);
+  width: 32px;
+  height: 32px;
+  opacity: 0.85;
+  transform: translateY(-50%);
 }
 
 .info-item dd {
@@ -700,18 +706,6 @@ select:hover {
 @media (max-width: 960px) {
   .event-grid {
     grid-template-columns: repeat(2, 1fr);
-  }
-
-  .info-list {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .info-item:nth-child(3) {
-    border-left: 0;
-  }
-
-  .info-item:nth-child(n + 3) {
-    border-top: 1px solid var(--border);
   }
 }
 
@@ -907,32 +901,12 @@ select:hover {
     grid-column: 1 / -1;
   }
 
-  .info-list {
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto auto;
-    grid-auto-flow: column;
+  .info-item {
+    padding: var(--space-3) var(--space-3) var(--space-3) 48px;
   }
 
-  .info-item,
-  .info-item + .info-item,
-  .info-item:nth-child(3) {
-    gap: var(--space-2);
-    padding: var(--space-3);
-    border-top: 0;
-    border-left: 0;
-  }
-
-  .info-item:nth-child(2),
-  .info-item:nth-child(4) {
-    border-top: 1px solid var(--border);
-  }
-
-  .info-item:nth-child(3),
-  .info-item:nth-child(4) {
-    border-left: 1px solid var(--border);
-  }
-
-  .info-item img {
+  .info-item dt img {
+    left: var(--space-3);
     width: 24px;
     height: 24px;
   }

@@ -12,7 +12,7 @@
   <main class="container detail">
     <a class="back-link" href="/#tapahtumat"><span aria-hidden="true">←</span> Takaisin tapahtumiin</a>
 
-    <p id="tapahtuman-tila" class="list-status" aria-live="polite" hidden></p>
+    <p id="tapahtuman-tila" class="list-status" role="alert" hidden></p>
 
     <article class="detail-card" id="tapahtuma" hidden>
       <div class="detail-media">
@@ -28,36 +28,16 @@
           <p class="meta"><img src="/icons/people.svg" alt="Osallistujat" width="16" height="16"><span id="tapahtuma-osallistujat-teksti"></span></p>
         </div>
 
-        <p class="detail-description" id="tapahtuma-kuvaus"></p>
+        <p class="detail-description" id="tapahtuma-tiedot"></p>
 
         <dl class="info-list">
           <div class="info-item">
-            <img src="/icons/calendar.svg" alt="">
-            <div>
-              <dt>Päivämäärä</dt>
-              <dd><time id="tapahtuma-paivamaara"></time></dd>
-            </div>
+            <dt><img src="/icons/location.svg" alt="" width="32" height="32">Paikkakunta</dt>
+            <dd id="tapahtuma-paikkakunta-tieto"></dd>
           </div>
           <div class="info-item">
-            <img src="/icons/clock.svg" alt="">
-            <div>
-              <dt>Kesto</dt>
-              <dd id="tapahtuma-kesto"></dd>
-            </div>
-          </div>
-          <div class="info-item">
-            <img src="/icons/location.svg" alt="">
-            <div>
-              <dt>Paikkakunta</dt>
-              <dd id="tapahtuma-paikkakunta2"></dd>
-            </div>
-          </div>
-          <div class="info-item">
-            <img src="/icons/users.svg" alt="">
-            <div>
-              <dt>Osallistujia</dt>
-              <dd id="tapahtuma-osallistujat"></dd>
-            </div>
+            <dt><img src="/icons/users.svg" alt="" width="32" height="32">Osallistujia</dt>
+            <dd id="tapahtuma-osallistujat"></dd>
           </div>
         </dl>
 

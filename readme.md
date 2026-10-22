@@ -50,24 +50,22 @@ Testattu demossa selaimessa (leveydet 320, 375, 800 ja 1200 px).
 
 ## Keskeneräiset tai puuttuvat ominaisuudet ja tunnetut viat
 
+Molemmat versiot lukevat samaa `tapahtumat.json`-tiedostoa, ja kuvien polut (`images/tapahtuma1.avif` jne.) vastaavat aineistoa.
+
+### Molemmat versiot
+
+- Aineistossa ei ole päivämäärää eikä kestoa, joten yksityiskohtasivulla näytetään aineiston kentät: kuva, nimi, kategoria, paikkakunta, osallistujat ja `tarkemmat_tiedot`
+- Yhteystiedot-linkki vie alatunnisteeseen, jossa ei ole yhteystietoja
+- Annettu `close.svg` on sisällöltään sama kuin `arrow-down.svg`, joten sitä ei käytetä. `clock.svg` ei ole käytössä, koska kestotietoa ei ole
+
 ### Demo
 
 - Alatunnisteen Tietosuojaseloste ja Käyttöehdot eivät ole linkkejä, koska niille ei ole sisältöä
-- Yhteystiedot-linkki vie alatunnisteeseen, jossa ei ole yhteystietoja
-- Aineistossa ei ole päivämäärää eikä kestoa, joten yksityiskohtasivulla näytetään vain paikkakunta ja osallistujat
-- Annettu `close.svg` on sisällöltään sama kuin `arrow-down.svg`, joten sitä ei käytetä. `clock.svg` ei ole käytössä, koska kestotietoa ei ole
-- Kuvat on muunnettu annetuista PNG-tiedostoista JPG-muotoon ja nimetty JSON-tiedoston polkujen mukaan (`images/tapahtuma1.jpg` jne.)
 
 ### Express-versio
 
-- Kun yksityiskohtasivun id on virheellinen tai puuttuu, virheilmoituksen alle jää näkyviin tyhjä tapahtumakortti. Syy: CSS-sääntö `.detail-card { display: grid }` ohittaa `hidden`-attribuutin
-- Ei-numeerinen id (esim. `?id=abc`) näyttää ilmoituksen "Tapahtumaa ei valittu", vaikka oikea ilmoitus olisi virheellinen tunniste
-- Yksityiskohtasivu ei näytä aineiston kenttää `tarkemmat_tiedot`, koska koodi lukee kenttiä `kuvaus`, `paivamaara` ja `kesto`, joita aineistossa ei ole
-- JSON-tiedoston kuvapolut ja kuvatiedostojen nimet (`images/Tapahtuma1.png` jne.) eivät täsmää, joten kuvat eivät näy kaikissa ympäristöissä
 - Alatunnisteen Tietosuojaseloste- ja Käyttöehdot-linkit ovat tyhjiä (`href="#"`)
-- Hyvin kapealla näytöllä (320 px) mobiilikortit aiheuttavat vähäisen vaakavierityksen
-- Yksityiskohtasivun tietolista (`dl`) ei ole kelvollista HTML:ää
-- Kuvat ovat isoja PNG-tiedostoja (n. 2 Mt / kuva)
+- Hyvin kapealla näytöllä (320 px) etusivu aiheuttaa vähäisen vaakavierityksen
 
 ## Tekoälyn käyttö
 
