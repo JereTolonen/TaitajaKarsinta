@@ -1,16 +1,16 @@
 # Tapahtumakalenteri
 
-Webkehityksen karsinta. Responsiivinen tapahtumasovellus, jonka tapahtumat luetaan JSON-tiedostosta JavaScriptillä.
+Taitaja2027, laji 206 – webkehityksen karsinta. Responsiivinen tapahtumasovellus, jonka tapahtumat luetaan JSON-tiedostosta JavaScriptillä.
 
 Projektissa on kaksi versiota:
 
-- **Demo (`demo/`)** – staattinen HTML/CSS/JS-versio, ei vaadi palvelinohjelmistoa. Nopea arvioitava versio: https://jeretolonen.github.io/TaitajaKarsinta/demo
+- **Demo (`demo/`)** – staattinen HTML/CSS/JS-versio, ei vaadi palvelinohjelmistoa. Suositeltu arvioitava versio: https://jeretolonen.github.io/TaitajaKarsinta/demo
 - **Express-versio** – sama sovellus Node.js/Express-palvelimella.
 
 ## Teknologiat
 
 - Demo: HTML, CSS, JavaScript
-- Express-versio: JS, Node.js, Express, EJS, dotenv, Docker
+- Express-versio: lisäksi Node.js, Express, EJS, dotenv, Docker
 
 ## Käynnistys
 
@@ -50,9 +50,11 @@ Testattu demossa selaimessa (leveydet 320, 375, 800 ja 1200 px).
 
 ## Keskeneräiset tai puuttuvat ominaisuudet ja tunnetut viat
 
-Molemmat versiot lukevat samaa `tapahtumat.json`-tiedostoa, ja kuvien polut (`images/tapahtuma1.avif` jne.) vastaavat aineistoa.
+- Projektissa ei ole tiedettyjä keskeneräisiä ominaiusuuksia tai vikoja ylipäätään
 
 ### Molemmat versiot
+
+- Molemmat versiot lukevat samaa `tapahtumat.json`-tiedostoa, ja kuvien polut (`images/tapahtuma1.avif` jne.) vastaavat aineistoa.
 
 - Aineistossa ei ole päivämäärää eikä kestoa, joten yksityiskohtasivulla näytetään aineiston kentät: kuva, nimi, kategoria, paikkakunta, osallistujat ja `tarkemmat_tiedot`
 - Yhteystiedot-linkki vie alatunnisteeseen, jossa ei ole yhteystietoja
